@@ -1,0 +1,19 @@
+import { Link } from "react-router-dom";
+
+function Header() {
+  return (
+    <nav className="nav">
+      <Link to="/">Home</Link>
+
+      <Link to="/employees">
+        Employees
+      </Link>
+
+      <Link to="/about">
+        About
+      </Link>
+    </nav>
+  );
+}
+
+export default Header;

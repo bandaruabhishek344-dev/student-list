@@ -1,0 +1,1232 @@
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.advanced-login {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  padding: 25px 20px;
+
+  box-sizing: border-box;
+
+  background-image: url("../assets/loginform.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+========================================================= */
+
+.background-blur {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.78),
+      rgba(252, 128, 25, 0.45)
+    );
+
+  backdrop-filter: blur(4px);
+
+  -webkit-backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   SMALLER SIZE
+========================================================= */
+
+.advanced-card {
+  width: 380px;
+
+  max-width: 90%;
+
+  padding: 32px;
+
+  position: relative;
+
+  z-index: 2;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(25px);
+
+  -webkit-backdrop-filter: blur(25px);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.3);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 20px 55px
+    rgba(0, 0, 0, 0.45);
+
+  color: #ffffff;
+
+  animation:
+    popup 0.5s ease;
+}
+
+
+/* =========================================================
+   POPUP ANIMATION
+========================================================= */
+
+@keyframes popup {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(40px)
+      scale(0.96);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+  width: 65px;
+
+  height: 65px;
+
+  margin:
+    0 auto;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #fc8019;
+
+  font-size: 36px;
+
+  box-shadow:
+    0 10px 25px
+    rgba(252, 128, 25, 0.5);
+
+  animation:
+    logoFloat 2.5s
+    ease-in-out
+    infinite;
+
+}
+
+
+@keyframes logoFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-5px);
+
+  }
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.advanced-card h1 {
+
+  text-align: center;
+
+  font-size: 30px;
+
+  margin:
+    15px 0 5px;
+
+  color: #fc8019;
+
+  font-weight: 800;
+
+}
+
+
+.advanced-card > p {
+
+  text-align: center;
+
+  color: #eeeeee;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  margin:
+    0 0 22px;
+
+}
+
+
+/* =========================================================
+   INPUT BOX
+========================================================= */
+
+.input-box {
+
+  position: relative;
+
+  width: 100%;
+
+  margin-bottom: 22px;
+
+}
+
+
+.input-box input {
+
+  width: 100%;
+
+  height: 50px;
+
+  padding:
+    0 48px 0 16px;
+
+  box-sizing: border-box;
+
+  border-radius: 11px;
+
+  border:
+    2px solid
+    transparent;
+
+  outline: none;
+
+  font-size: 15px;
+
+  color: #333333;
+
+  background: #ffffff;
+
+  transition: 0.3s;
+
+}
+
+
+.input-box input:focus {
+
+  border-color:
+    #fc8019;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(252, 128, 25, 0.15);
+
+}
+
+
+.input-box label {
+
+  position: absolute;
+
+  left: 16px;
+
+  top: 15px;
+
+  color: #777777;
+
+  pointer-events: none;
+
+  transition: 0.3s;
+
+}
+
+
+/* Floating label */
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+
+  top: -9px;
+
+  font-size: 11px;
+
+  color: #fc8019;
+
+  background: #ffffff;
+
+  padding:
+    0 7px;
+
+  border-radius: 5px;
+
+}
+
+
+/* =========================================================
+   PASSWORD EYE
+========================================================= */
+
+.eye {
+
+  position: absolute;
+
+  right: 16px;
+
+  top: 14px;
+
+  cursor: pointer;
+
+  color: #555555;
+
+  font-size: 19px;
+
+  user-select: none;
+
+  transition: 0.2s;
+
+}
+
+
+.eye:hover {
+
+  transform:
+    scale(1.15);
+
+}
+
+
+/* =========================================================
+   PASSWORD STRENGTH
+========================================================= */
+
+.strength {
+
+  font-size: 13px;
+
+  margin-top: -12px;
+
+  margin-bottom: 12px;
+
+  font-weight: 700;
+
+}
+
+
+.strength.Weak {
+
+  color: #ff4d4d;
+
+}
+
+
+.strength.Medium {
+
+  color: #ffd166;
+
+}
+
+
+.strength.Strong {
+
+  color: #06d6a0;
+
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.options {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap: 10px;
+
+  font-size: 13px;
+
+  margin:
+    17px 0;
+
+}
+
+
+.options label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  cursor: pointer;
+
+}
+
+
+.options input {
+
+  width: 15px;
+
+  height: 15px;
+
+  cursor: pointer;
+
+}
+
+
+.options a {
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+
+}
+
+
+.options a:hover {
+
+  color: #fc8019;
+
+  text-decoration:
+    underline;
+
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.submit-btn {
+
+  width: 100%;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: #fc8019;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.submit-btn:hover:not(:disabled) {
+
+  background:
+    #e86f0a;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(252, 128, 25, 0.5);
+
+}
+
+
+.submit-btn:active:not(:disabled) {
+
+  transform:
+    translateY(0);
+
+}
+
+
+.submit-btn:disabled {
+
+  opacity: 0.6;
+
+  cursor:
+    not-allowed;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin:
+    23px 0;
+
+  color: #ffffff;
+
+}
+
+
+.divider::before,
+.divider::after {
+
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.7);
+
+}
+
+
+.divider span {
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
+
+.social-buttons {
+
+  display: flex;
+
+  gap: 10px;
+
+  width: 100%;
+
+}
+
+
+.social-buttons button {
+
+  flex: 1;
+
+  height: 45px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #333333;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.social-buttons button:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 18px
+    rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* =========================================================
+   SIGNUP TEXT
+========================================================= */
+
+.signup-text {
+
+  margin-top: 18px;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+}
+
+
+.signup-text button {
+
+  border: none;
+
+  background:
+    transparent;
+
+  color: #fc8019;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-left: 5px;
+
+  padding: 0;
+
+}
+
+
+.signup-text button:hover {
+
+  text-decoration:
+    underline;
+
+}
+
+
+/* =========================================================
+   SIGNUP POPUP OVERLAY
+========================================================= */
+
+.signup-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+    rgba(0, 0, 0, 0.65);
+
+  backdrop-filter:
+    blur(6px);
+
+  -webkit-backdrop-filter:
+    blur(6px);
+
+  animation:
+    fadeIn 0.25s ease;
+
+}
+
+
+/* =========================================================
+   SIGNUP POPUP
+========================================================= */
+
+.signup-popup {
+
+  width: 100%;
+
+  max-width: 420px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(0, 0, 0, 0.45);
+
+  animation:
+    popup 0.3s ease;
+
+}
+
+
+.signup-popup h2 {
+
+  margin:
+    0 0 7px;
+
+  text-align: center;
+
+  color: #222222;
+
+  font-size: 26px;
+
+}
+
+
+.signup-popup > p {
+
+  text-align: center;
+
+  color: #666666;
+
+  margin-bottom: 22px;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================================
+   SIGNUP CLOSE BUTTON
+========================================================= */
+
+.signup-close {
+
+  position: absolute;
+
+  top: 12px;
+
+  right: 12px;
+
+  width: 34px;
+
+  height: 34px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f3f4f6;
+
+  color: #333333;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.signup-close:hover {
+
+  background:
+    #fc8019;
+
+  color: #ffffff;
+
+  transform:
+    rotate(90deg);
+
+}
+
+
+/* =========================================================
+   SIGNUP INPUT
+========================================================= */
+
+.signup-input {
+
+  width: 100%;
+
+  height: 48px;
+
+  box-sizing: border-box;
+
+  padding:
+    0 14px;
+
+  margin-bottom: 14px;
+
+  border:
+    1px solid
+    #d1d5db;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+
+}
+
+
+.signup-input:focus {
+
+  border-color:
+    #fc8019;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(252, 128, 25, 0.12);
+
+}
+
+
+/* =========================================================
+   SIGNUP BUTTON
+========================================================= */
+
+.signup-submit {
+
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    #fc8019;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.signup-submit:hover {
+
+  background:
+    #e86f0a;
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+/* =========================================================
+   FADE ANIMATION
+========================================================= */
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+  }
+
+  to {
+
+    opacity: 1;
+
+  }
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .advanced-login {
+
+  background-color:
+    #111827;
+
+}
+
+
+body.dark .signup-popup {
+
+  background:
+    #1f2937;
+
+  color:
+    #ffffff;
+
+}
+
+
+body.dark .signup-popup h2 {
+
+  color:
+    #ffffff;
+
+}
+
+
+body.dark .signup-popup > p {
+
+  color:
+    #d1d5db;
+
+}
+
+
+body.dark .signup-input {
+
+  background:
+    #111827;
+
+  color:
+    #ffffff;
+
+  border-color:
+    #374151;
+
+}
+
+
+body.dark .signup-close {
+
+  background:
+    #374151;
+
+  color:
+    #ffffff;
+
+}
+
+
+body.dark .signup-close:hover {
+
+  background:
+    #fc8019;
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+  .advanced-login {
+
+    padding:
+      25px;
+
+  }
+
+  .advanced-card {
+
+    width: 380px;
+
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen
+and (min-width: 601px)
+and (max-width: 1023px) {
+
+  .advanced-login {
+
+    padding:
+      25px;
+
+  }
+
+  .advanced-card {
+
+    width: 370px;
+
+    padding:
+      30px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .advanced-login {
+
+    min-height:
+      100svh;
+
+    padding:
+      20px 15px;
+
+  }
+
+
+  .advanced-card {
+
+    width: 92%;
+
+    max-width:
+      360px;
+
+    padding:
+      27px 20px;
+
+    border-radius:
+      19px;
+
+  }
+
+
+  .logo {
+
+    width: 60px;
+
+    height: 60px;
+
+    font-size: 32px;
+
+  }
+
+
+  .advanced-card h1 {
+
+    font-size:
+      27px;
+
+  }
+
+
+  .advanced-card > p {
+
+    font-size:
+      13px;
+
+    margin-bottom:
+      22px;
+
+  }
+
+
+  .input-box input {
+
+    height:
+      50px;
+
+    font-size:
+      14px;
+
+  }
+
+
+  .options {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+  }
+
+
+  .options a {
+
+    align-self:
+      flex-end;
+
+  }
+
+
+  .social-buttons {
+
+    flex-direction:
+      column;
+
+    gap:
+      9px;
+
+  }
+
+
+  .signup-popup {
+
+    width:
+      95%;
+
+    padding:
+      28px 20px;
+
+    border-radius:
+      16px;
+
+  }
+
+
+  .signup-popup h2 {
+
+    font-size:
+      23px;
+
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+  .advanced-card {
+
+    width: 95%;
+
+    padding:
+      24px 17px;
+
+  }
+
+
+  .advanced-card h1 {
+
+    font-size:
+      24px;
+
+  }
+
+
+  .logo {
+
+    width:
+      55px;
+
+    height:
+      55px;
+
+    font-size:
+      29px;
+
+  }
+
+
+  .options {
+
+    font-size:
+      12px;
+
+  }
+
+
+  .submit-btn {
+
+    height:
+      48px;
+
+    font-size:
+      15px;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+  }
+
+}

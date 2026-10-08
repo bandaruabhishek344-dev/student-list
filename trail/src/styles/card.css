@@ -1,0 +1,50 @@
+.food-card {
+  width: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0,0,0,.2);
+  background: white;
+  transition: .3s;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+}
+
+.food-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.food-card h3 {
+  padding: 10px;
+}
+
+.food-card p {
+  padding: 0 10px;
+}
+
+.food-card h2 {
+  padding: 10px;
+  color: tomato;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.buttons button {
+  border: none;
+  padding: 10px 20px;
+  background: tomato;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons button:hover {
+  background: orangered;
+}

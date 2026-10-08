@@ -1,0 +1,1009 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:"Poppins",sans-serif;
+
+  background:
+  linear-gradient(
+    135deg,
+    #f8fbff,
+    #eef5ff,
+    #fff7ef
+  );
+
+  background-size:400% 400%;
+
+  animation:bgMove 15s ease infinite;
+
+  color:#222;
+
+  overflow-x:hidden;
+
+  line-height:1.6;
+
+  transition:
+    background .4s ease,
+    color .4s ease;
+
+  min-height:100vh;
+
+}
+
+/* ==========================================
+   BACKGROUND ANIMATION
+========================================== */
+
+@keyframes bgMove{
+
+  0%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+  100%{
+    background-position:0% 50%;
+  }
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#ececec;
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:
+  linear-gradient(
+    180deg,
+    #ff9800,
+    #ff5722
+  );
+
+  border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+  background:#ff6b35;
+
+}
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection{
+
+  background:#ff9800;
+
+  color:#fff;
+
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img{
+
+  max-width:100%;
+
+  display:block;
+
+  transition:.4s;
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a{
+
+  text-decoration:none;
+
+  color:inherit;
+
+  transition:.3s;
+
+}
+
+a:hover{
+
+  color:#ff6b35;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button{
+
+  font-family:"Poppins",sans-serif;
+
+  border:none;
+
+  outline:none;
+
+  cursor:pointer;
+
+  transition:
+    transform .3s,
+    background .3s,
+    color .3s,
+    box-shadow .3s;
+
+}
+
+button:hover{
+
+  transform:translateY(-3px);
+
+}
+
+button:active{
+
+  transform:scale(.96);
+
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+input,
+textarea,
+select{
+
+  font-family:"Poppins",sans-serif;
+
+  border:none;
+
+  outline:none;
+
+  transition:.3s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+  box-shadow:
+  0 0 12px rgba(255,107,53,.25);
+
+}
+
+/* ==========================================
+   CONTAINERS
+========================================== */
+
+.container{
+
+  width:90%;
+
+  max-width:1400px;
+
+  margin:auto;
+
+}
+
+.section{
+
+  padding:70px 0;
+
+}
+
+/* ==========================================
+   COMMON UTILITIES
+========================================== */
+
+.text-center{
+
+  text-align:center;
+
+}
+
+.flex{
+
+  display:flex;
+
+}
+
+.flex-center{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+.grid{
+
+  display:grid;
+
+}
+
+.hidden{
+
+  display:none;
+
+}
+
+/* ==========================================
+   COMMON GLASS CARDS
+========================================== */
+
+.food-card,
+.cart-card,
+.checkout-container,
+.drag-column,
+.login-form,
+.no-results,
+.modal-content,
+.summary-card,
+.profile-card,
+.wishlist-card{
+
+  background:rgba(255,255,255,.92);
+
+  backdrop-filter:blur(15px);
+
+  -webkit-backdrop-filter:blur(15px);
+
+  border-radius:22px;
+
+  border:1px solid rgba(255,255,255,.35);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.10);
+
+  transition:
+    transform .35s,
+    box-shadow .35s,
+    background .35s;
+
+}
+
+.food-card:hover,
+.cart-card:hover,
+.drag-column:hover,
+.summary-card:hover,
+.profile-card:hover,
+.wishlist-card:hover{
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.18);
+
+}
+
+/* ==========================================
+   COMMON BUTTON
+========================================== */
+
+.primary-btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+
+  padding:14px 28px;
+
+  border-radius:40px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff9800,
+      #ff5722
+    );
+
+  color:#fff;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  letter-spacing:.4px;
+
+  box-shadow:
+    0 12px 25px rgba(255,107,53,.25);
+
+}
+
+.primary-btn:hover{
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 18px 35px rgba(255,107,53,.35);
+
+}
+
+.primary-btn:active{
+
+  transform:scale(.97);
+
+}
+
+/* ==========================================
+   OUTLINE BUTTON
+========================================== */
+
+.outline-btn{
+
+  padding:12px 24px;
+
+  border-radius:35px;
+
+  border:2px solid #ff9800;
+
+  background:transparent;
+
+  color:#ff9800;
+
+  font-weight:600;
+
+}
+
+.outline-btn:hover{
+
+  background:#ff9800;
+
+  color:#fff;
+
+}
+
+/* ==========================================
+   DANGER BUTTON
+========================================== */
+
+.danger-btn{
+
+  background:#ef4444;
+
+  color:#fff;
+
+  padding:12px 24px;
+
+  border-radius:30px;
+
+}
+
+.danger-btn:hover{
+
+  background:#dc2626;
+
+}
+
+/* ==========================================
+   SUCCESS BUTTON
+========================================== */
+
+.success-btn{
+
+  background:#16a34a;
+
+  color:#fff;
+
+  padding:12px 24px;
+
+  border-radius:30px;
+
+}
+
+.success-btn:hover{
+
+  background:#15803d;
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title{
+
+  text-align:center;
+
+  font-size:36px;
+
+  font-weight:700;
+
+  color:#ff6b35;
+
+  margin-bottom:30px;
+
+}
+
+/* ==========================================
+   SUB TITLE
+========================================== */
+
+.section-subtitle{
+
+  text-align:center;
+
+  color:#666;
+
+  margin-bottom:40px;
+
+  font-size:16px;
+
+}
+
+/* ==========================================
+   LOADER
+========================================== */
+
+.loader{
+
+  width:55px;
+
+  height:55px;
+
+  border-radius:50%;
+
+  border:6px solid #eee;
+
+  border-top:6px solid #ff9800;
+
+  animation:spin 1s linear infinite;
+
+  margin:40px auto;
+
+}
+
+@keyframes spin{
+
+  100%{
+
+    transform:rotate(360deg);
+
+  }
+
+}
+
+/* ==========================================
+   PAGE ANIMATION
+========================================== */
+
+.fade-page{
+
+  animation:fadePage .7s ease;
+
+}
+
+@keyframes fadePage{
+
+  0%{
+
+    opacity:0;
+
+    transform:
+      translateY(30px);
+
+  }
+
+  100%{
+
+    opacity:1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+/* ==========================================
+   CARD ANIMATION
+========================================== */
+
+.zoom-card{
+
+  animation:zoomCard .45s ease;
+
+}
+
+@keyframes zoomCard{
+
+  from{
+
+    opacity:0;
+
+    transform:scale(.92);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:scale(1);
+
+  }
+
+}
+
+/* ==========================================
+   SHADOW UTILITIES
+========================================== */
+
+.shadow-sm{
+
+  box-shadow:
+    0 5px 12px rgba(0,0,0,.10);
+
+}
+
+.shadow-md{
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.15);
+
+}
+
+.shadow-lg{
+
+  box-shadow:
+    0 25px 50px rgba(0,0,0,.20);
+
+}
+
+/* ==========================================
+   BORDER RADIUS UTILITIES
+========================================== */
+
+.rounded{
+
+  border-radius:12px;
+
+}
+
+.rounded-lg{
+
+  border-radius:20px;
+
+}
+
+.rounded-xl{
+
+  border-radius:30px;
+
+}
+
+/* ==========================================
+   ADVANCED DARK MODE
+========================================== */
+
+body.dark{
+
+  background:
+  linear-gradient(
+    135deg,
+    #0f172a,
+    #111827,
+    #1f2937
+  );
+
+  background-size:400% 400%;
+
+  animation:bgMove 15s ease infinite;
+
+  color:#f8fafc;
+
+}
+
+/* ==========================================
+   HEADER & FOOTER
+========================================== */
+
+body.dark .header,
+body.dark .footer{
+
+  background:#111827;
+
+  color:#ffffff;
+
+  border-bottom:1px solid #334155;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+body.dark .food-card,
+body.dark .cart-card,
+body.dark .wishlist-card,
+body.dark .checkout-container,
+body.dark .summary-card,
+body.dark .drag-column,
+body.dark .login-form,
+body.dark .profile-card,
+body.dark .modal-content,
+body.dark .profile-menu{
+
+  background:#1e293b;
+
+  color:#ffffff;
+
+  border:1px solid #334155;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.40);
+
+}
+
+body.dark .food-card:hover,
+body.dark .cart-card:hover,
+body.dark .wishlist-card:hover{
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.50);
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6{
+
+  color:#ffffff;
+
+}
+
+body.dark p,
+body.dark span,
+body.dark label,
+body.dark small{
+
+  color:#d1d5db;
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+body.dark a{
+
+  color:#f8fafc;
+
+}
+
+body.dark a:hover{
+
+  color:#fbbf24;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+body.dark .nav a{
+
+  color:#e5e7eb;
+
+}
+
+body.dark .nav a.active{
+
+  color:#fbbf24;
+
+  font-weight:600;
+
+}
+
+/* ==========================================
+   SEARCH BAR
+========================================== */
+
+body.dark .search-bar,
+body.dark input,
+body.dark textarea,
+body.dark select{
+
+  background:#334155;
+
+  color:#ffffff;
+
+  border:1px solid #475569;
+
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+
+  color:#94a3b8;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+body.dark button{
+
+  background:#334155;
+
+  color:#ffffff;
+
+  transition:.3s;
+
+}
+
+body.dark button:hover{
+
+  background:#475569;
+
+}
+
+body.dark .primary-btn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #f59e0b,
+    #ea580c
+  );
+
+}
+
+body.dark .primary-btn:hover{
+
+  box-shadow:
+    0 15px 35px rgba(245,158,11,.40);
+
+}
+
+/* ==========================================
+   THEME BUTTON
+========================================== */
+
+body.dark .theme-btn{
+
+  background:#f59e0b;
+
+  color:#ffffff;
+
+  border-radius:50%;
+
+}
+
+body.dark .theme-btn:hover{
+
+  background:#ea580c;
+
+}
+
+/* ==========================================
+   PROFILE MENU
+========================================== */
+
+body.dark .profile-menu{
+
+  background:#1e293b;
+
+  border:1px solid #334155;
+
+}
+
+body.dark .profile-menu button{
+
+  width:100%;
+
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+body.dark table{
+
+  background:#1e293b;
+
+}
+
+body.dark th{
+
+  background:#334155;
+
+  color:white;
+
+}
+
+body.dark td{
+
+  color:#d1d5db;
+
+  border-color:#334155;
+
+}
+
+/* ==========================================
+   LOADER
+========================================== */
+
+body.dark .loader{
+
+  border:6px solid #334155;
+
+  border-top:6px solid #f59e0b;
+
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+body.dark img{
+
+  filter:
+    brightness(.95)
+    contrast(1.05);
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+body.dark ::-webkit-scrollbar-track{
+
+  background:#111827;
+
+}
+
+body.dark ::-webkit-scrollbar-thumb{
+
+  background:
+  linear-gradient(
+    180deg,
+    #f59e0b,
+    #ea580c
+  );
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:1200px){
+
+  .section-title{
+
+    font-size:32px;
+
+  }
+
+}
+
+@media (max-width:992px){
+
+  .container{
+
+    width:95%;
+
+  }
+
+}
+
+@media (max-width:768px){
+
+  body{
+
+    font-size:15px;
+
+  }
+
+  .section-title{
+
+    font-size:28px;
+
+  }
+
+  .primary-btn{
+
+    width:100%;
+
+  }
+
+  .food-card,
+  .cart-card,
+  .wishlist-card{
+
+    border-radius:18px;
+
+  }
+
+}
+
+@media (max-width:480px){
+
+  body{
+
+    font-size:14px;
+
+  }
+
+  .section-title{
+
+    font-size:24px;
+
+  }
+
+  .primary-btn{
+
+    padding:12px 20px;
+
+    font-size:14px;
+
+  }
+
+  .food-card,
+  .cart-card{
+
+    border-radius:15px;
+
+  }
+
+}
+

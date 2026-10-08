@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f7;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: #1e293b;
+}
+
+input {
+  width: 350px;
+  padding: 12px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.product-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.card h3 {
+  color: #16a34a;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: royalblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #1d4ed8;
+}

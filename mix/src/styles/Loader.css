@@ -1,0 +1,144 @@
+/* =====================================
+   LOADER
+===================================== */
+
+.loader-container{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:50px;
+
+}
+
+/* ==========================
+SPINNER
+========================== */
+
+.loader{
+
+width:70px;
+height:70px;
+
+border-radius:50%;
+
+border:8px solid #eee;
+
+border-top:8px solid #ff6b35;
+
+animation:spin .8s linear infinite;
+
+}
+
+/* ==========================
+ANIMATION
+========================== */
+
+@keyframes spin{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ==========================
+TEXT
+========================== */
+
+.loader-text{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:18px;
+
+font-weight:bold;
+
+color:#ff6b35;
+
+animation:pulse 1.2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+opacity:.4;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.4;
+
+}
+
+}
+
+/* ==========================
+OPTIONAL FOOD ICON
+========================== */
+
+.loader-food{
+
+font-size:50px;
+
+margin-bottom:15px;
+
+animation:bounce 1s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+/* ==========================
+DARK MODE
+========================== */
+
+.dark .loader{
+
+border:8px solid #444;
+
+border-top:8px solid #ff9800;
+
+}
+
+.dark .loader-text{
+
+color:#ff9800;
+
+}

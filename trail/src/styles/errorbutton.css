@@ -1,0 +1,20 @@
+.error-test {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.error-test button {
+  background-color: #0e0605;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.error-test button:hover {
+  background-color: #c62828;
+}

@@ -1,0 +1,96 @@
+/* Laptop */
+
+@media(max-width:1200px){
+
+.food-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+/* Tablet */
+
+@media(max-width:900px){
+
+.food-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.cart-card{
+flex-direction:column;
+text-align:center;
+}
+
+.header{
+padding:20px;
+flex-wrap:wrap;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.food-grid{
+grid-template-columns:1fr;
+}
+
+.header{
+flex-direction:column;
+gap:20px;
+}
+
+.header nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.header-right{
+flex-direction:column;
+}
+
+.search-container{
+width:100%;
+}
+
+.login-form{
+padding:25px;
+}
+
+.drag-board{
+flex-direction:column;
+}
+
+.cart-card img{
+width:100%;
+height:220px;
+}
+
+.checkout-container{
+padding:20px;
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:400px){
+
+.header h2{
+font-size:22px;
+}
+
+.login-form h1{
+font-size:26px;
+}
+
+.food-card h3{
+font-size:20px;
+}
+
+.cart-container h1{
+font-size:28px;
+}
+
+}

@@ -1,0 +1,333 @@
+.error-container {
+
+  min-height: 80vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background: #f5f7fb;
+
+}
+
+
+
+.error-card {
+
+  width: 420px;
+
+  background: white;
+
+  padding: 40px 35px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 
+  0 15px 40px rgba(0,0,0,0.15);
+
+  animation: slideUp 0.4s ease;
+
+}
+
+
+
+@keyframes slideUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+  }
+
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+
+
+.error-icon {
+
+  font-size: 60px;
+
+  margin-bottom: 15px;
+
+}
+
+
+
+
+.error-card h1 {
+
+  font-size: 30px;
+
+  color: #dc2626;
+
+  margin-bottom: 15px;
+
+}
+
+
+
+
+.error-card p {
+
+  color: #555;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+
+.error-actions {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+}
+
+
+
+
+
+.error-actions button {
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  font-weight: 600;
+
+}
+
+
+
+
+
+.retry-btn {
+
+  background: #2563eb;
+
+  color: white;
+
+}
+
+
+.retry-btn:hover {
+
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+}
+
+
+
+
+
+.home-btn {
+
+  background: #16a34a;
+
+  color: white;
+
+}
+
+
+.home-btn:hover {
+
+  background: #15803d;
+
+  transform: translateY(-2px);
+
+}
+
+
+
+
+
+.reload-btn {
+
+  background: #f59e0b;
+
+  color: white;
+
+}
+
+
+.reload-btn:hover {
+
+  background: #d97706;
+
+  transform: translateY(-2px);
+
+}
+
+
+
+
+
+.retry-info {
+
+  margin-top: 20px;
+
+  padding: 10px;
+
+  background: #eff6ff;
+
+  color: #1d4ed8;
+
+  border-radius: 8px;
+
+}
+
+
+
+
+
+.details-btn {
+
+  margin-top: 15px;
+
+  background: #111827;
+
+  color: white;
+
+  padding: 10px 15px;
+
+  border-radius: 8px;
+
+  border: none;
+
+  cursor: pointer;
+
+}
+
+
+
+
+
+.details-btn:hover {
+
+  background: #000;
+
+}
+
+
+
+
+
+.error-details {
+
+  margin-top: 15px;
+
+  padding: 15px;
+
+  background: #111827;
+
+  color: #f87171;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  overflow-x: auto;
+
+  font-size: 14px;
+
+}
+
+
+
+
+
+.error-card small {
+
+  display: block;
+
+  margin-top: 25px;
+
+  color: #777;
+
+  font-size: 13px;
+
+}
+
+
+
+
+
+/* DARK MODE SUPPORT */
+
+
+.dark .error-container {
+
+  background: #111827;
+
+}
+
+
+
+.dark .error-card {
+
+  background: #1f2937;
+
+  color: white;
+
+}
+
+
+
+.dark .error-card h1 {
+
+  color: #f87171;
+
+}
+
+
+
+.dark .error-card p {
+
+  color: #d1d5db;
+
+}
+
+
+
+.dark .error-card small {
+
+  color: #9ca3af;
+
+}

@@ -1,0 +1,708 @@
+/* ===================================================
+   HOME PAGE
+=================================================== */
+
+.container{
+
+max-width:1700px;
+
+margin:auto;
+
+padding:35px;
+
+min-height:100vh;
+
+animation:fadeIn .7s ease;
+
+}
+
+/* ===================================================
+   HERO SECTION
+=================================================== */
+
+.page-title{
+
+font-size:50px;
+
+font-weight:700;
+
+text-align:center;
+
+background:linear-gradient(135deg,#6d573a,#0f0e0e);
+
+
+-webkit-text-fill-color:transparent;
+
+margin-bottom:10px;
+
+letter-spacing:1px;
+
+}
+
+.page-subtitle{
+
+text-align:center;
+
+font-size:18px;
+
+color:#666;
+
+margin-bottom:35px;
+
+}
+
+/* ===================================================
+   SEARCH & FILTER
+=================================================== */
+
+.filter-container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+margin:30px 0;
+
+flex-wrap:wrap;
+
+}
+
+.filter-container select{
+
+padding:14px 20px;
+
+border-radius:12px;
+
+border:none;
+
+background:white;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+font-size:15px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.filter-container select:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* ===================================================
+   FOOD GRID
+=================================================== */
+
+.food-grid{
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:22px;
+
+align-items:stretch;
+
+}
+
+/* ===================================================
+   EMPTY STATE
+=================================================== */
+
+.no-results{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:80px;
+
+border-radius:25px;
+
+background:white;
+
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+margin-top:40px;
+
+}
+
+.no-results h2{
+
+font-size:38px;
+
+color:#ff5722;
+
+margin-bottom:15px;
+
+}
+
+.no-results p{
+
+font-size:18px;
+
+color:#666;
+
+}
+
+/* ===================================================
+   ERROR BUTTON
+=================================================== */
+
+.error-btn{
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(135deg,#ff5252,#d50000);
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+margin-bottom:30px;
+
+box-shadow:0 10px 25px rgba(255,82,82,.3);
+
+transition:.35s;
+
+}
+
+.error-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 18px 35px rgba(255,82,82,.4);
+
+}
+
+/* ===================================================
+   LOADER
+=================================================== */
+
+.loading-box{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:50px;
+
+}
+
+/* ===================================================
+   ANIMATIONS
+=================================================== */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===================================================
+   DARK MODE
+=================================================== */
+
+.dark .container{
+
+color:white;
+
+}
+
+.dark .page-subtitle{
+
+color:#bbb;
+
+}
+
+.dark .filter-container select{
+
+background:#2b2b2b;
+
+color:white;
+
+border:1px solid #444;
+
+}
+
+.dark .no-results{
+
+background:#222;
+
+}
+
+.dark .no-results h2{
+
+color:#ff9800;
+
+}
+
+.dark .no-results p{
+
+color:#ddd;
+
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media(max-width:1600px){
+
+.food-grid{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+}
+
+@media(max-width:1200px){
+
+.food-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.page-title{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.food-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.filter-container{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.filter-container select{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.container{
+
+padding:15px;
+
+}
+
+.food-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.page-title{
+
+font-size:32px;
+
+}
+
+.page-subtitle{
+
+font-size:15px;
+
+}
+
+.error-btn{
+
+width:100%;
+
+}
+
+}
+
+/* ===============================
+      HERO BANNER
+================================ */
+
+.hero-banner {
+
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 80px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  background: linear-gradient(
+    135deg,
+    #fff5e6,
+    #ffe0b2
+  );
+
+  overflow: hidden;
+
+}
+
+
+/* ===============================
+      HERO CONTENT
+================================ */
+
+.hero-content {
+
+  flex: 1;
+
+  max-width: 400px;
+
+}
+
+.hero-tag {
+
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  border-radius: 30px;
+
+  background: #ff6b35;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  margin-bottom: 20px;
+
+}
+
+
+/* ===============================
+      TITLE
+================================ */
+
+.page-title {
+
+  font-size: 52px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  color: #222;
+
+  margin-bottom: 20px;
+
+}
+
+
+.page-subtitle {
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #555;
+
+  margin-bottom: 35px;
+
+}
+
+
+/* ===============================
+      BUTTONS
+================================ */
+
+.hero-buttons {
+
+  display: flex;
+
+  gap: 20px;
+
+}
+
+
+.hero-btn {
+
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+
+/* Primary Button */
+
+.hero-btn.primary {
+
+  background: #ff6b35;
+
+  color: white;
+
+}
+
+
+.hero-btn.primary:hover {
+
+  background: #e85a28;
+
+  transform: translateY(-3px);
+
+}
+
+
+/* Secondary Button */
+
+.hero-btn.secondary {
+
+  background: white;
+
+  color: #ff6b35;
+
+  border: 2px solid #ff6b35;
+
+}
+
+
+.hero-btn.secondary:hover {
+
+  background: #ff6b35;
+
+  color: white;
+
+}
+
+
+/* ===============================
+      HERO IMAGE
+================================ */
+
+.hero-image {
+
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+
+.hero-image img {
+
+  width: 100%;
+
+  max-width: 520px;
+
+  height: 400px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  box-shadow: 0 20px 40px rgba(
+    0,
+    0,
+    0,
+    0.15
+  );
+
+  transition: 0.4s ease;
+
+}
+
+
+.hero-image img:hover {
+
+  transform: scale(1.05);
+
+}
+
+
+/* ===============================
+      DARK MODE SUPPORT
+================================ */
+
+.dark .hero-banner {
+
+  background: linear-gradient(
+    135deg,
+    #1e1e1e,
+    #333
+  );
+
+}
+
+
+.dark .page-title {
+
+  color: white;
+
+}
+
+
+.dark .page-subtitle {
+
+  color: #ddd;
+
+}
+
+
+.dark .hero-btn.secondary {
+
+  background: transparent;
+
+}
+
+
+/* ===============================
+      TABLET RESPONSIVE
+================================ */
+
+@media(max-width:900px){
+
+
+.hero-banner {
+
+  flex-direction: column;
+
+  padding:40px 30px;
+
+  text-align:center;
+
+}
+
+
+.hero-content {
+
+  max-width:100%;
+
+}
+
+
+.page-title {
+
+  font-size:40px;
+
+}
+
+
+.hero-buttons {
+
+  justify-content:center;
+
+}
+
+
+.hero-image img {
+
+  height:320px;
+
+}
+
+
+}
+
+
+/* ===============================
+      MOBILE RESPONSIVE
+================================ */
+
+@media(max-width:500px){
+
+
+.hero-banner {
+
+  padding:30px 20px;
+
+}
+
+
+.page-title {
+
+  font-size:32px;
+
+}
+
+
+.page-subtitle {
+
+  font-size:15px;
+
+}
+
+
+.hero-buttons {
+
+  flex-direction:column;
+
+}
+
+
+.hero-btn {
+
+  width:100%;
+
+}
+
+
+.hero-image img {
+
+  height:250px;
+
+}
+
+
+}

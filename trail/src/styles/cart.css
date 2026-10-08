@@ -1,0 +1,52 @@
+.cart-page {
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.cart-item img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.quantity {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.quantity button {
+  width: 35px;
+  height: 35px;
+}
+
+.remove-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.total {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.total button {
+  padding: 10px 20px;
+  margin-top: 10px;
+}

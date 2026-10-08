@@ -1,0 +1,17 @@
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+ 
+input {
+  width: 90%;
+  padding: 8px;
+}
+ 
+button {
+  padding: 8px 15px;
+}

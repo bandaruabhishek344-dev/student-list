@@ -1,0 +1,141 @@
+.food-card {
+  width: 300px;
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.18);
+}
+
+/* ==========================
+      FOOD IMAGE
+========================== */
+.food-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+/* ==========================
+      FOOD TITLE
+========================== */
+.food-card h3 {
+  font-size: 21px;
+  margin: 15px 0 10px;
+  color: #222;
+  font-weight: 700;
+}
+
+.food-card p {
+  margin: 7px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* ==========================
+      BUTTON AREA
+========================== */
+.card-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.card-buttons button {
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+
+/* ADD CART */
+.cart-btn {
+  background: #2563eb;
+  color:white;
+}
+
+.cart-btn:hover {
+  background:#1d4ed8;
+  transform: scale(1.05);
+}
+
+/* WISHLIST */
+.wishlist-btn {
+  background:#fee2e2;
+  font-size:18px !important;
+}
+
+.wishlist-btn:hover {
+  background:#fecaca;
+  transform: scale(1.1);
+}
+
+/* VIEW DETAILS */
+.details-link {
+  text-decoration:none;
+  background:#16a34a;
+  color:white;
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:600;
+  transition:0.3s ease;
+  text-align:center;
+
+}
+
+.details-link:hover {
+  background:#15803d;
+  transform:scale(1.05);
+}
+
+/* ==========================
+      GRID RESPONSIVE
+========================== */
+@media(max-width:768px){
+.food-card{
+ width:100%;
+}
+
+.food-card img{
+ height:200px;
+}
+
+.card-buttons{
+ flex-wrap:wrap;
+}
+
+}
+
+/* ==========================
+      DARK MODE
+========================== */
+.dark .food-card {
+  background:#070707;
+  color:white;
+}
+
+.dark .food-card h3 {
+  color:white;
+}
+
+.dark .food-card p {
+  color:#d1d5db;
+}
+
+
