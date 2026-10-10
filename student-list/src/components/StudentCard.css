@@ -1,0 +1,207 @@
+
+.student-card {
+  min-width: 0;
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e7eeeb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(25, 69, 52, 0.025);
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.student-card:hover {
+  transform: translateY(-3px);
+  border-color: #c4e3d5;
+  box-shadow: 0 9px 25px rgba(25, 69, 52, 0.07);
+}
+
+.student-card-top {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.student-avatar {
+  width: 49px;
+  height: 49px;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.avatar-green {
+  color: #087e58;
+  background: #d8f2e5;
+}
+
+.avatar-purple {
+  color: #8351bc;
+  background: #eee2ff;
+}
+
+.avatar-orange {
+  color: #b9621e;
+  background: #ffead5;
+}
+
+.avatar-blue {
+  color: #286cb5;
+  background: #dceeff;
+}
+
+.student-heading {
+  min-width: 0;
+  flex: 1;
+}
+
+.student-heading h3 {
+  margin: 0 0 5px;
+  overflow-wrap: anywhere;
+  color: #203a32;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.student-id {
+  color: #8b9b95;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+}
+
+.student-status {
+  align-self: flex-start;
+  color: #21a777;
+  font-size: 10px;
+}
+
+.student-tags {
+  min-height: 40px;
+  padding-top: 13px;
+}
+
+.course-badge {
+  max-width: 100%;
+  padding: 5px 9px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge-green {
+  color: #087d57;
+  background: #e0f7ec;
+}
+
+.badge-purple {
+  color: #8550bd;
+  background: #f0e5ff;
+}
+
+.badge-orange {
+  color: #b96625;
+  background: #fff0df;
+}
+
+.badge-blue {
+  color: #2a72b9;
+  background: #e1efff;
+}
+
+.student-details {
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+  margin: 11px 0 18px;
+}
+
+.student-details > div {
+  display: grid;
+  gap: 4px;
+}
+
+.detail-label {
+  color: #91a19a;
+  font-size: 10px;
+}
+
+.student-details strong {
+  color: #3e5b50;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.student-email {
+  overflow-wrap: anywhere;
+  color: #627b70;
+  font-size: 11px;
+}
+
+.student-bio {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: #879991;
+  font-size: 11px;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+}
+
+/* Card actions */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 13px;
+  margin-top: auto;
+  border-top: 1px solid #eff3f1;
+}
+
+.edit-button,
+.delete-button {
+  min-height: 35px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.edit-button {
+  color: #fff;
+  background: #07835c;
+}
+
+.edit-button:hover {
+  background: #066d4c;
+}
+
+.delete-button {
+  color: #ce5353;
+  background: #fff0ef;
+}
+
+.delete-button:hover {
+  border-color: #f4c8c5;
+  background: #ffe3e1;
+}
+
+@media (max-width: 700px) {
+  .student-card {
+    padding: 16px;
+  }
+}
