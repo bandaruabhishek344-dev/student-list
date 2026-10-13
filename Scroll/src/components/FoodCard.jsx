@@ -5,7 +5,7 @@ function FoodCard({ food }) {
         display: "flex",
         gap: "20px",
         marginBottom: "20px",
-        padding: "15px",
+        padding: "16px",
         border: "1px solid #ddd",
       }}
     >
